@@ -1,0 +1,481 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- helloworld.html
+     A trivial document
+     -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+  <head> <title>GEThotel:Search</title>
+      <link rel="stylesheet" href="style.css">
+      <style>
+          .booktitle {padding: 40px;margin-bottom: -50px;margin-left: -100px;}
+          .mybox {border: solid 1px; width: 93%; text-align: center;margin: 30px;height: 17.5%;border-radius: 10px;background-color: lightblue;}
+          .mybooking {width: 70%;height: 500px;float: left;margin-left: 5%;margin-top: 3%;}
+          .ordertitle {text-align: left;margin: 10px;}
+          .bookingtable {border: solid 1px; float: left;width: 95%;height: 150%;margin-bottom: 100px;}
+          .hotelname {text-align: left; width: 20%;margin-left: 10px;float: left;}
+          .location, .rate, .price, .tag {float: left;margin-left: 2%;}
+          .hotelpic {float: right;width: 16.5%; margin-top: -12.3%;border-radius: 10px;}
+          .pagelink {margin-left: 85%;margin-top: 5%;}
+          .map {float: right; margin-right: -34%; width: 38%;}
+          
+      </style>
+
+  </head>
+    
+ <body>
+      <header>
+          <a href="gethotelmainpage.html" class="logo">
+              <h2>&nbsp;&nbsp;<b style="color: white">GET</b>hotel.com</h2>
+          </a>
+          
+          <select class="choosecountry" style="float: left;">
+              <option value ="UK">UK-&pound;</option>
+              <option value ="US">US-$</option>
+              <option value="China">China-&yen;</option>
+              <option value="Europe">Europe-&euro;</option>
+            </select>
+          
+            <input style=position:relative;left:80%;top:-40px;width:80px;  type="submit" name="login" id="button1" value="Log in" onclick="loginwin()"/>
+            <input style=position:relative;left:81%;top:-40px;width:80px; type="button"name="register" id="button2" value="Register" onclick="regist()"/>
+          <nav>
+              <ul class="main" style="color: black">
+                  <li><a href="gethotelmainpage.html" class="bar" style="background-color: black;">Hotel booking</a></li>
+                  <li><a href="Hotel%20Deals.html" class="bar">Special offer</a></li>
+                  <li><a href="" class="bar">Group booking</a></li>
+                  <li><a href="" class="bar">Long term booking</a></li>
+                  <li><a href="mybooking.html" class="bar">My booking</a></li>
+                  <li><a href="Customer%20Service.html" class="bar">Get help</a></li>
+              </ul>
+          </nav>
+      </header>
+      
+     
+     
+          <!--Search part-->
+      <div class="south-search-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="advanced-search-form">
+                        
+                        <form action="#" method="post" id="advanceSearch">
+                            <div class="row">
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-group">
+                                        <input type="input" class="form-control" name="input" placeholder="Name of the hotel">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-group">
+                                        <select class="form-control" id="cities" style="display: none;">
+                                            <option>Destination</option>
+                                            <option>London</option>
+                                            <option>Manchester</option>
+                                            <option>Hong Kong</option>
+                                            <option>Roma</option>
+                                            <option>Toronto</option>
+                                            <option>Beijing</option>
+                                            <option>Paris</option>
+                                            <option>LA</option>
+                                            <option>Auckland</option>
+                                            <option>Helsinki</option>
+                                        </select><div class="nice-select form-control" tabindex="0"><span class="current">Destination</span><ul class="list"><li data-value="All Cities" class="option selected">Destination</li><li data-value="London" class="option">London</li><li data-value="Manchester" class="option">Manchester</li><li data-value="Hongkong" class="option">Hong Kong</li><li data-value="Roma" class="option">Roma</li><li data-value="Toronto" class="option">Toronto</li><li data-value="Beijing" class="option">Beijing</li><li data-value="Paris" class="option">Paris</li><li data-value="LA" class="option">LA</li><li data-value="Auckland" class="option">Auckland</li><li data-value="Helsinki" class="option">Helsinki</li></ul></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-group">
+                                        <select class="form-control" id="catagories" style="display: none;">
+                                            <option>All Catagories</option>
+                                            <option>Apartment</option>
+                                            <option>Hotel</option>
+                                            <option>Farm</option>
+                                            <option>House</option>
+                                     
+                                        </select><div class="nice-select form-control" tabindex="0"><span class="current">All Catagories</span><ul class="list"><li data-value="All Catagories" class="option selected">All Catagories</li><li data-value="Apartment" class="option">Apartment</li><li data-value="Hotel" class="option">Hotel</li><li data-value="Farm" class="option">Farm</li><li data-value="House" class="option">House</li></ul></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-lg-3">
+                                    <div class="form-group">
+                                        <select class="form-control" id="offers" style="display: none;">
+                                            <option>All Offers</option>
+                                            <option>100% OFF</option>
+                                            <option>75% OFF</option>
+                                            <option>50% OFF</option>
+                                            <option>25% OFF</option>
+                                            <option>10% OFF</option>
+                                        </select><div class="nice-select form-control" tabindex="0"><span class="current">All Offers</span><ul class="list"><li data-value="All Offers" class="option selected">All Offers</li><li data-value="100% OFF" class="option">100% OFF</li><li data-value="75% OFF" class="option">75% OFF</li><li data-value="50% OFF" class="option">50% OFF</li><li data-value="25% OFF" class="option">25% OFF</li><li data-value="10% OFF" class="option">10% OFF</li></ul></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-xl-3">
+                                    <div class="form-group">
+                                        <select class="form-control" id="Night" style="display: none;">
+                                            <option>Nights stay</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select><div class="nice-select form-control" tabindex="0"><span class="current">Nights stay</span><ul class="list"><li data-value="Nights stay" class="option selected">Nights stay</li><li data-value="1" class="option">1</li><li data-value="2" class="option">2</li><li data-value="3" class="option">3</li><li data-value="4" class="option">4</li><li data-value="5" class="option">5</li></ul></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-xl-2">
+                                    <div class="form-group">
+                                        <select class="form-control" id="bedrooms" style="display: none;">
+                                            <option>Bedrooms</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5+</option>
+                                        </select><div class="nice-select form-control" tabindex="0"><span class="current">Bedrooms</span><ul class="list"><li data-value="Bedrooms" class="option selected">Bedrooms</li><li data-value="1" class="option">1</li><li data-value="2" class="option">2</li><li data-value="3" class="option">3</li><li data-value="4" class="option">4</li><li data-value="5+" class="option">5+</li></ul></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-4 col-xl-2">
+                                    <div class="form-group">
+                                        <select class="form-control" id="bathrooms" style="display: none;">
+                                            <option>Bathrooms</option>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5+</option>
+                                        </select><div class="nice-select form-control" tabindex="0"><span class="current">Bathrooms</span><ul class="list"><li data-value="Bathrooms" class="option selected">Bathrooms</li><li data-value="1" class="option">1</li><li data-value="2" class="option">2</li><li data-value="3" class="option">3</li><li data-value="4" class="option">4</li><li data-value="5+" class="option">5+</li></ul></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-8 col-lg-12 col-xl-5 d-flex">
+                                    <!-- Space Range -->
+                                    <div class="slider-range">
+                                        <div data-min="100" data-max="1000" data-unit=" sq. ft" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-value-min="100" data-value-max="1000">
+                                            <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
+                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0%;"></span>
+                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 100%;"></span>
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div></div>
+                                        <div class="range">100 sq. ft - 1000 sq. ft</div>
+                                    </div>
+
+                                    <!-- Distance Range -->
+                                    <div class="slider-range">
+                                        <div data-min="0" data-max="100" data-unit=" km" class="slider-range-price ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" data-value-min="0" data-value-max="100">
+                                            <div class="ui-slider-range ui-widget-header ui-corner-all"></div>
+                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 0%;"></span>
+                                            <span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 100%;"></span>
+                                        <div class="ui-slider-range ui-corner-all ui-widget-header" style="left: 0%; width: 100%;"></div></div>
+                                        <div class="range">0 km - 100 km</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 search-form-second-steps">
+                                    <div class="row">
+
+                                        <div class="col-12 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <select class="form-control" id="types" style="display: none;">
+                                                    <option>All Types</option>
+                                                    <option>Apartment (30)</option>
+                                                    <option>Land (69)</option>
+                                                    <option>Villas (103)</option>
+                                                </select><div class="nice-select form-control" tabindex="0"><span class="current">All Types</span><ul class="list"><li data-value="All Types" class="option selected">All Types</li><li data-value="Apartment (30)" class="option">Apartment (30)</li><li data-value="Land (69)" class="option">Land (69)</li><li data-value="Villas (103)" class="option">Villas (103)</li></ul></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <select class="form-control" id="Adult" style="display: none;">
+                                                    <option>Number of adult</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select><div class="nice-select form-control" tabindex="0"><span class="current">Number of adult</span><ul class="list"><li data-value="Number of adult" class="option selected">Number of adult</li><li data-value="1" class="option">1</li><li data-value="2" class="option">2</li><li data-value="3" class="option">3</li><li data-value="4" class="option">4</li><li data-value="5" class="option">5</li></ul></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <select class="form-control" id="Number of child" style="display: none;">
+                                                    <option>Number of child</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                </select><div class="nice-select form-control" tabindex="0"><span class="current">Number of child</span><ul class="list"><li data-value="Number of child" class="option selected">Number of child</li><li data-value="1" class="option">1</li><li data-value="2" class="option">2</li><li data-value="3" class="option">3</li><li data-value="4" class="option">4</li><li data-value="5" class="option">5</li></ul></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4 col-lg-3">
+                                            <div class="form-group">
+                                                <select class="form-control" id="Tags" style="display: none;">
+                                                    <option>Tags</option>
+                                                    <option>City view</option>
+                                                    <option>Next to sea</option>
+                                                    <option>In centre</option>
+                                                </select><div class="nice-select form-control" tabindex="0"><span class="current">Tags</span><ul class="list"><li data-value="Tags" class="option selected">Tags</li><li data-value="City view" class="option">City view</li><li data-value="Next to sea" class="option">Next to sea</li><li data-value="In centre" class="option">In centre</li></ul></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4">
+                                            <div class="form-group">
+                                                <input type="input" class="form-control" name="input" placeholder="Checkin Date">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-md-4">
+                                            <div class="form-group">
+                                                <input type="input" class="form-control" name="input" placeholder="Checkout Data"></div>
+                                            </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-flex justify-content-between align-items-end">
+                                    <!-- More Filter -->
+                                    <div class="more-filter">
+                                        <a href="#" id="moreFilter">+ More filters</a>
+                                    </div>
+                                    <!-- Submit -->
+                                    <div class="form-group mb-0">
+                                       <a href="Hotelsearch.html" class="btn south-btn" style="border: solid 1px black;color: black;background-color: lightgray;">Search</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+     
+     
+       <!--Result part-->
+     
+     
+     <div class="mybooking">
+         <div><img src="image/map.jpg" class="map"></div>
+         <div class="bookingtable">
+             
+             <!--Hotel1-->
+             <div class="mybox">
+                 <div>
+                    <div class="hotelname">
+                        <a href="about:blank">
+                            <p>
+                                Shangri-La Hotel at The Shard, London
+                            </p>
+                        </a>
+                    </div>
+                     <div class="location">
+                         <p>32 London Brigde St, London SE1 9SG</p>
+                     </div>
+                     <div class="price">
+                         <p>Start with &pound;500</p>
+                     </div>
+                     <br><br>
+                     <div class="rate" style="float: left;margin-left: 2%;">
+                         <p>Rating: 9.4</p>
+                     </div>
+                     <br><br>
+                     <div class="tag" style="margin-left: 23%;">
+                         <p><b style="border: 1px solid black; border-radius: 10px;">#Tags</b>: Romantic, River view, City view</p>
+                     </div>
+                     
+                 </div>
+                 
+                 
+                 <div><img class="hotelpic" src="image/hotel.jpg"></div>
+             </div> 
+             <!--Hotel2-->
+             <div class="mybox">
+                 <div>
+                    <div class="hotelname">
+                        <a href="about:blank">
+                            <p>
+                                Rosewood Lodnon
+                            </p>
+                        </a>
+                    </div>
+                     <div class="location">
+                         <p>252 High holborn, London, WC1V 7EN</p>
+                     </div>
+                     <div class="price">
+                         <p>Start with &pound;525</p>
+                     </div>
+                     <br><br>
+                     <div class="rate" style="float: left;margin-left: 23%;">
+                         <p>Rating: 9.3</p>
+                     </div>
+                     <br><br>
+                     <div class="tag" style="margin-left: 23%;">
+                         <p><b style="border: 1px solid black; border-radius: 10px;">#Tags</b>: Romantic, River view, Beautiful building</p>
+                     </div>
+                     
+                 </div>
+                 
+                 
+                 <div><img class="hotelpic" src="image/hotel2.jpg" style="height: 129px;"></div>
+             </div> 
+              <!--Hotel4-->
+              <div class="mybox">
+                 <div>
+                    <div class="hotelname">
+                        <a href="about:blank">
+                            <p>
+                                The Ritz London
+                            </p>
+                        </a>
+                    </div>
+                     <div class="location">
+                         <p>150 Piccadilly, London, W1J 9BR</p>
+                     </div>
+                     <div class="price">
+                         <p>Start with &pound;600</p>
+                     </div>
+                     <br><br>
+                     <div class="rate" style="float: left;margin-left: 23%;">
+                         <p>Rating: 9.2</p>
+                     </div>
+                     <br><br>
+                     <div class="tag" style="margin-left: 23%;">
+                         <p><b style="border: 1px solid black; border-radius: 10px;">#Tags</b>: Old Building, Afternoon Tea</p>
+                     </div>
+                     
+                 </div>
+                 
+                 
+                 <div><img class="hotelpic" src="image/hotel3.jpg" style="height: 129px;    "></div>
+             </div>
+             <!--Hotel3-->
+              <div class="mybox">
+                 <div>
+                    <div class="hotelname">
+                        <a href="about:blank">
+                            <p>
+                                Conrad London St James
+                            </p>
+                        </a>
+                    </div>
+                     <div class="location">
+                         <p>22-28 Broadway, London, SW1H 0BH</p>
+                     </div>
+                     <div class="price">
+                         <p>Start with &pound;350</p>
+                     </div>
+                     <br><br>
+                     <div class="rate" style="float: left;margin-left: 2%;">
+                         <p>Rating: 9.0</p>
+                     </div>
+                     <br><br>
+                     <div class="tag" style="margin-left: 23%;">
+                         <p><b style="border: 1px solid black; border-radius: 10px;">#Tags</b>: Center London</p>
+                     </div>
+                     
+                 </div>
+                 
+                 
+                 <div><img class="hotelpic" src="image/hotel.jpg"></div>
+             </div>  
+         
+         
+
+             <div class="pagelink">
+                 <a href="">&lt;</a>
+                 <a href="">1</a>
+                 <a href="">2</a>
+                 <a href="">3</a>
+                 <a href="">&gt;</a>
+
+
+
+             </div>
+         </div>
+     </div>
+     
+       <!--Footer part-->
+     <div class="footer" style="width: 100%;margin-top: 65%;">
+         <div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">Tablet Version</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">Mobile Version</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">Manage Your Bookings</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">CustomerService Help</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">Become An Offilicate</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t"><b style="color: red;">Get</b>hotel.com for business</p></a>
+             </div>
+         </div>
+         <div class="footer2">
+            <div><a href="about:blank"><p>Countries</p></a></div>
+            <div><a href="about:blank"><p>Regions</p></a></div>
+            <div><a href="about:blank"><p>Cities</p></a></div>
+            <div><a href="about:blank"><p>Districts</p></a></div>
+            <div><a href="about:blank"><p>Airports</p></a></div>
+            <div><a href="about:blank"><p>Hotels</p></a></div>
+            <div><a href="about:blank"><p>Places of interest</p></a></div>
+         </div>
+         <div class="footer2">
+             <div><a href="about:blank"><p>Holiday rentals</p></a></div>
+             <div><a href="about:blank"><p>Apartments</p></a></div>
+             <div><a href="about:blank"><p>Resorts</p></a></div>
+             <div><a href="about:blank"><p>Villas</p></a></div>
+             <div><a href="about:blank"><p>Hostels</p></a></div>
+             <div><a href="about:blank"><p>B&amp;Bs</p></a></div>
+             <div><a href="about:blank"><p>Guest house</p></a></div>
+         </div>
+         <div class="footer2">
+             <div><a href="about:blank"><p>Unique place to stay</p></a></div>
+             <div><a href="about:blank"><p>All destination</p></a></div>
+             <div><a href="about:blank"><p>Reviews</p></a></div>
+             <div><a href="about:blank"><p>Unpacked: trael articles</p></a></div>
+         </div>
+        <div class="footer2">
+            <div><a href="about:blank"><p>Car hire</p></a></div>
+            <div><a href="about:blank"><p>Flight factor</p></a></div>
+            <div><a href="about:blank"><p>Restaurant Resevation</p></a></div>
+            <div><a href="about:blank"><p>GEThotel for Travel Agents</p></a></div>
+         </div>
+         <div class="footer2right">
+                <div><a href="about:blank"><p>About GEThotel.com</p></a></div>
+                <div><a href="about:blank"><p>Give website feedback</p></a></div>
+                <div><a href="about:blank"><p>Customer Service help</p></a></div>
+                <div><a href="about:blank"><p>Partner Help</p></a></div>
+                <div><a href="about:blank"><p>Careers</p></a></div>
+                <div><a href="about:blank"><p>Press centre</p></a></div>
+                <div><a href="about:blank"><p>Terms &amp; Conditions</p></a></div>
+                <div><a href="about:blank"><p>How we work</p></a></div>
+                <div><a href="about:blank"><p>Privacy &amp; Cookie Statement</p></a></div>
+                <div><a href="about:blank"><p>Cooporate contact</p></a></div>
+        </div>
+         <div class="company">
+     <p>Copyright &copy; 1949-2019 GETHotel.com&trade;. All right reserved</p>
+     </div> 
+     </div>
+ 
+     
+         <!-- jQuery (Necessary for All JavaScript Plugins) -->
+        <script src="js/jquery/jquery-2.2.4.min.js"></script>
+        <!-- Plugins js -->
+        <script src="js/plugins.js"></script>
+        <script src="js/classy-nav.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <!-- Active js -->
+        <script src="js/active.js"></script> 
+     
+     
+</body>
+      

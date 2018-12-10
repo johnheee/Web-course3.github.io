@@ -1,0 +1,233 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+
+<html xmlns = "http://www.w3.org/1999/xhtml">
+    <head>
+		<title>Customer Service</title>
+		<link rel="stylesheet" href="style.css">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        
+		<style>
+            body {background-color: whitesmoke}
+            #cs {margin: 2%; margin-bottom: 80px;}
+            #box {text-align: center;height: 150px;width: 100%;}
+            #search {width: 8%;height: 35px;float: left;}
+            #helpbox {float: left;width: 60%;height: 35px;margin-left: 16%;}
+            #FAQ {margin-left: 10%;}
+            .faqdiv {float: left;border: solid 1px black;padding: 0.5%;width: 80%;margin-left: 10%; border-radius: 10px;}
+            .contect {margin: 5%; float: right;}
+		</style>
+        
+        
+       <script type="text/javascript">
+      
+            function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){
+            var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;
+            var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;
+            var openTip = oOpenTip || "";
+            var shutTip = oShutTip || "";
+            if(targetObj.style.display!="none"){
+               if(shutAble) return;
+               targetObj.style.display="none";
+               if(openTip  &&  shutTip){
+                sourceObj.innerHTML = shutTip; 
+               }
+            } else {
+               targetObj.style.display="block";
+               if(openTip  &&  shutTip){
+                sourceObj.innerHTML = openTip; 
+               }
+            }
+            }
+   </script>
+
+	</head>
+    
+	<body>
+        <header>
+          <a href="gethotelmainpage.html" class="logo">
+              <h2>&nbsp;&nbsp;<b style="color: white">GET</b>hotel.com</h2>
+          </a>
+          
+            <input style=position:relative;left:80%;top:-40px;width:80px;  type="submit" name="login" id="button1" value="Log in" onclick="loginwin()"/>
+            <input style=position:relative;left:81%;top:-40px;width:80px; type="button"name="register" id="button2" value="Register" onclick="regist()"/>
+          <nav>
+              <ul class="main" style="color: black">
+                  <li><a href="gethotelmainpage.html" class="bar">Hotel booking</a></li>
+                  <li><a href="Hotel%20Deals.html" class="bar">Special offer</a></li>
+                  <li><a href="" class="bar">Group booking</a></li>
+                  <li><a href="" class="bar">Long term booking</a></li>
+                  <li><a href="mybooking.html" class="bar">My booking</a></li>
+                  <li><a href="Customer%20Service.html" class="bar" style="background-color: black;">Get help</a></li>
+              </ul>
+          </nav>
+      </header>
+		<div>
+			<h1 id="cs">Cutomer Service</h1>
+		</div>
+		<div id="box">
+				<input type="text" name="search" placeholder="Please enter your question" id="helpbox">
+				<input type="button" name="search" id="search" value="Search">
+		</div>
+		<div>
+			<h3 id="FAQ">FAQ:</h3>
+			<div>
+				<ul>
+                    <div class="faqdiv">
+					<li>GetHotel.com Rewards </li>
+                     
+                    <p><button style="float: right; margin-top: -2%;width: 70px;" onclick="openShutManager(this,'box1',false,'Hide','More')">More</button></p>
+                    <p id="box1" style="display:none">
+                      To become a Hotels.com™ Rewards member, create an account or sign up on our Hotels.com™ Rewards page.
+                      How it works
+                      Book a stay at an eligible hotel.
+                      Collect 1 Rewards night for each night you stay.
+                      Once you have collected 10 rewards nights, you will get 1 rewards night at an eligible hotel or vacation rental.
+                      Additional benefits
+                      Collect nights for business travel.
+                      Enjoy travel perks when you reach Hotels.com® Rewards Silver or Hotels.com® Rewards Gold tier status.
+                      Unlock Secret Prices on selected hotels and vacation rentals.
+                      Good to know
+                      The value of your rewards night is equal to the average rate of the 10 nights you collected to earn it.
+                      You can attach a booking to your account that you made prior to joining Hotels.com™ Rewards, if you have not yet completed your stay.
+                      For more information, read the Hotels.com Terms and Conditions.
+                    </p>
+                   </div>
+                    
+                    <div class="faqdiv">
+					<li>Hotels &amp; Vocation Rentals</li>
+                    <p><button style="float: right; margin-top: -2%;width: 70px;" onclick="openShutManager(this,'box2',false,'Hide','More')">More</button></p>
+                    <p id="box2" style="display:none">
+                       Your upcoming, completed, and canceled hotel and vacation rental bookings are stored in your account. After booking, we send you a confirmation email containing your itinerary. This email is your booking confirmation.
+                      To view and email your hotel or vacation rental itinerary
+                      Sign in to your bookings page.
+                      Select View booking next to the itinerary you would like to view or email.
+                      Select Send as email.
+                      To find a booking
+                      If you don't have a Hotels.com account or can't see your booking listed, you can look up your booking confirmation using your last name and the itinerary or confirmation number emailed with your booking.
+                      Still need help?
+                      If you can't locate your booking, contact us  for help.
+                    </p>
+                    </div>
+                    
+                    <div class="faqdiv">
+					<li>Flight &amp; Package Booking </li>
+                    <p><button style="float: right; margin-top: -2%;width: 70px;" onclick="openShutManager(this,'box3',false,'Hide','More')">More</button></p>
+                    <p id="box3" style="display:none">
+                       You cannot view your flight or package bookings in your Hotels.com account.
+                      When you book a flight or package, you will receive a confirmation email that includes:
+                      Your itinerary information
+                      Your Hotels.com itinerary number
+                      Your 6-character flight confirmation code
+                      You will not receive a paper confirmation, receipt, or tickets. We recommend printing out your itinerary and confirmation code before traveling.
+                      To receive an email copy of your package or flight itinerary
+                      Go to Find your booking.
+                      Select Request confirmation email.
+                      Enter the email address associated with your booking, and select Send.
+                      Still need help?
+                      If you can't locate your booking, contact us  for help.
+                    </p>
+                   </div>
+                    
+                    <div class="faqdiv">
+					<li>Privacy &amp; Security</li>
+                    <p><button style="float: right; margin-top: -2%;width: 70px;" onclick="openShutManager(this,'box4',false,'Hide','More')">More</button></p>
+                    <p id="box4" style="display:none">
+                       Hotels.com is committed to protecting and securing your personal information. We explain how we do this in our Privacy and Cookies policies.
+                      In our Privacy Policy, we let you know:
+                      What information we collect and why.
+                      How we use that information.
+                      When and why we share your information with other organizations.
+                      The rights you have and ways you can control your information.
+                      You can read our Privacy Policy in full here.
+                      Some of our websites have a separate Cookies Policy. In our Cookies Policy, we let you know:
+                      What cookies are.
+                      How we use them for analytics.
+                      How they help us create personalized content to improve your experience on our site.
+                      How they help serve you with ads that may be of interest.
+                      You can read our Cookies Policy in full here.
+                      If you have any questions about either policy, please contact us                    
+                      </p>
+                        
+                    </div>
+				</ul>
+			</div>
+        
+			<div class="contect">
+                <h4 style="margin-left: -40%;font-family: cursive">Or you can find us with the contect information below:</h4>
+				<h4 style="font-family: cursive">Email us: gethotels@gmail.com</h4>
+				<h4 style="font-family: cursive">Call us: +44 07724 888 888</h4>
+			</div>
+		
+	   <!--Footer part-->
+     <div class="footer" style="margin-top: 600px; width: 100%;">
+         <div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">Tablet Version</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">Mobile Version</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">Manage Your Bookings</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">CustomerService Help</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">Become An Offilicate</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t"><b style="color: red;">Get</b>hotel.com for business</p></a>
+             </div>
+         </div>
+         <div class="footer2">
+            <div><a href="about:blank"><p>Countries</p></a></div>
+            <div><a href="about:blank"><p>Regions</p></a></div>
+            <div><a href="about:blank"><p>Cities</p></a></div>
+            <div><a href="about:blank"><p>Districts</p></a></div>
+            <div><a href="about:blank"><p>Airports</p></a></div>
+            <div><a href="about:blank"><p>Hotels</p></a></div>
+            <div><a href="about:blank"><p>Places of interest</p></a></div>
+         </div>
+         <div class="footer2">
+             <div><a href="about:blank"><p>Holiday rentals</p></a></div>
+             <div><a href="about:blank"><p>Apartments</p></a></div>
+             <div><a href="about:blank"><p>Resorts</p></a></div>
+             <div><a href="about:blank"><p>Villas</p></a></div>
+             <div><a href="about:blank"><p>Hostels</p></a></div>
+             <div><a href="about:blank"><p>B&amp;Bs</p></a></div>
+             <div><a href="about:blank"><p>Guest house</p></a></div>
+         </div>
+         <div class="footer2">
+             <div><a href="about:blank"><p>Unique place to stay</p></a></div>
+             <div><a href="about:blank"><p>All destination</p></a></div>
+             <div><a href="about:blank"><p>Reviews</p></a></div>
+             <div><a href="about:blank"><p>Unpacked: trael articles</p></a></div>
+         </div>
+        <div class="footer2">
+            <div><a href="about:blank"><p>Car hire</p></a></div>
+            <div><a href="about:blank"><p>Flight factor</p></a></div>
+            <div><a href="about:blank"><p>Restaurant Resevation</p></a></div>
+            <div><a href="about:blank"><p>GEThotel for Travel Agents</p></a></div>
+         </div>
+         <div class="footer2right">
+                <div><a href="about:blank"><p>About GEThotel.com</p></a></div>
+                <div><a href="about:blank"><p>Give website feedback</p></a></div>
+                <div><a href="about:blank"><p>Customer Service help</p></a></div>
+                <div><a href="about:blank"><p>Partner Help</p></a></div>
+                <div><a href="about:blank"><p>Careers</p></a></div>
+                <div><a href="about:blank"><p>Press centre</p></a></div>
+                <div><a href="about:blank"><p>Terms &amp; Conditions</p></a></div>
+                <div><a href="about:blank"><p>How we work</p></a></div>
+                <div><a href="about:blank"><p>Privacy &amp; Cookie Statement</p></a></div>
+                <div><a href="about:blank"><p>Cooporate contact</p></a></div>
+        </div>
+         <div class="company">
+     <p>Copyright &copy; 1949-2019 GETHotel.com&trade;. All right reserved</p>
+     </div> 
+            </div>
+
+</body>

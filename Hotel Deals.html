@@ -1,0 +1,210 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- helloworld.html
+     A trivial document
+     -->
+<html xmlns = "http://www.w3.org/1999/xhtml">
+  <head> <title>GEThotel: Special offer</title>
+      <link rel="stylesheet" href="style.css">
+      <style>
+          .dealpic {}
+          #deal1, #deal2, #deal3 {margin-left: 3%;margin-top: 3%;margin-bottom: 5%;border-radius:10px;width: 29%;height: 210px;}
+          #offer1 {width: 40%;margin-left: 5%;margin-top: 3%;border-radius:10px;height: 25%;}
+          .offercity1 {position: absolute;left: 6%;z-index: 999;top: 120%;font-size: 50px;font-weight: 700; color: white;}
+          #offer2 {width: 40%;margin-left: 55%;margin-top: -36.5%;border-radius:10px; height: 25%;}
+          .offercity2 {position: absolute;left: 56%;z-index: 999;top: 120%;font-size: 50px;font-weight: 700; color: white;}
+          #offer3 {width: 20%;margin-left: 5%;margin-top: 3%;border-radius:10px; height: 10%;}
+          .offercity3 {position: absolute;left: 6%;z-index: 999;top: 173.5%;font-size: 30px;font-weight: 700; color: white;}
+          #offer4 {width: 20%;margin-left: 28%;margin-top: -15.5%;border-radius:10px;height: 168px;}
+          .offercity4 {position: absolute;left: 29%;z-index: 999;top: 173.5%;font-size: 30px;font-weight: 700; color: white;}
+          #offer5 {width: 20%;margin-left: 52%;margin-top: -19.3%;border-radius:10px; height: 168px;}
+          .offercity5 {position: absolute;left: 53%;z-index: 999;top: 173.5%;font-size: 30px;font-weight: 700; color: white;}
+          #offer6 {width: 20%;margin-left: 75%;margin-top: -23%;border-radius:10px;height: 168px;}
+          .offercity6 {position: absolute;left: 76%;z-index: 999;top: 173.5%;font-size: 30px;font-weight: 700; color: white;}
+          #offer7 {width: 20%;margin-left: 5%;margin-top: 0%;border-radius:10px; height: 10%;}
+          .offercity7 {position: absolute;left: 6%;z-index: 999;top: 218.5%;font-size: 30px;font-weight: 700; color: white;}
+          #offer8 {width: 20%;margin-left: 28%;margin-top: -12.5%;border-radius:10px;height: 168px;}
+          .offercity8 {position: absolute;left: 29%;z-index: 999;top: 218.5%;font-size: 30px;font-weight: 700; color: white;}
+          #offer9 {width: 20%;margin-left: 52%;margin-top: -16.3%;border-radius:10px; height: 168px;}
+          .offercity9 {position: absolute;left: 53%;z-index: 999;top: 218.5%;font-size: 30px;font-weight: 700; color: white;}
+          #offer10 {width: 20%;margin-left: 75%;margin-top: -20%;border-radius:10px;height: 168px;}
+          .offercity10 {position: absolute;left: 76%;z-index: 999;top: 218.5%;font-size: 30px;font-weight: 700; color: white;}
+          
+          
+          
+      </style>
+
+  </head>
+    
+ <body>
+      <header>
+          <a href="gethotelmainpage.html" class="logo">
+              <h2>&nbsp;&nbsp;<b style="color: white">GET</b>hotel.com</h2>
+          </a>
+          
+          <select class="choosecountry" style="float: left;">
+              <option value ="UK">UK-&pound;</option>
+              <option value ="US">US-$</option>
+              <option value="China">China-&yen;</option>
+              <option value="Europe">Europe-&euro;</option>
+            </select>
+          
+            <input style=position:relative;left:80%;top:-40px;width:80px;  type="submit" name="login" id="button1" value="Log in" onclick="loginwin()"/>
+            <input style=position:relative;left:81%;top:-40px;width:80px; type="button"name="register" id="button2" value="Register" onclick="regist()"/>
+          <nav>
+              <ul class="main" style="color: black">
+                  <li><a href="gethotelmainpage.html" class="bar">Hotel booking</a></li>
+                  <li><a href="Hotel%20Deals.html" class="bar" style="background-color: black;">Special offer</a></li>
+                  <li><a href="" class="bar">Group booking</a></li>
+                  <li><a href="" class="bar">Long term booking</a></li>
+                  <li><a href="mybooking.html" class="bar">My booking</a></li>
+                  <li><a href="Customer%20Service.html" class="bar">Get help</a></li>
+              </ul>
+          </nav>
+      </header>
+     
+     <div class="dealpic">
+         <a href="about:blank"><img alt="Last Minute Deal" border="0" src="image/deal1.JPG" id="deal1"/></a>
+         <a href="about:blank"><img alt="City Break" border="0" src="image/deal2.JPG" id="deal2"/></a>
+         <a href="about:blank"><img alt="early bird" border="0" src="image/deal3.JPG" id="deal3"/></a>
+     </div>
+     
+     <div class="dealcity">
+         <h3 style="margin-left: 3%;"><b>Best offers in hotest destinations</b></h3>
+         <div>
+             <a href="about:blank">
+                     <img alt="Beijing" border="0" src="image/offer1.jpg" id="offer1"/>
+                     <b class="offercity1">Beijing</b>
+             </a>
+             <p style="margin-left: 5%;margin-top: 1%; font-family: cursive;">Best offers in 04-06-2018 to 06-06-2018</p>
+         </div>
+         <div>
+             <a href="about:blank">
+                     <img alt="Singapore" border="0" src="image/offer2.jpg" id="offer2"/>
+                     <b class="offercity2">Singapore</b>
+             </a>
+             <p style="margin-left: 55%;margin-top: -5%; font-family: cursive;">Best offers in 27-08-2018 to 30-08-2018</p>
+         </div>
+         <div>
+             <a href="about:blank">
+                <img alt="Moscow" border="0" src="image/offer3.jpg" id="offer3"/>
+                <b class="offercity3">Moscow</b>
+             </a>
+         </div>
+         <div>
+             <a href="about:blank" style="height: 10%;">
+                <img alt="NewYork" border="0" src="image/offer4.jpg" id="offer4"/>
+                <b class="offercity4">New York</b>
+             </a>
+         </div>
+         <div>
+             <a href="about:blank">
+                <img alt="Dubai" border="0" src="image/offer5.jpg" id="offer5"/>
+                <b class="offercity5">Dubai</b>
+             </a>
+         </div>
+         <div>
+             <a href="about:blank" style="height: 10%;">
+                <img alt="Egypt" border="0" src="image/offer6.jpg" id="offer6"/>
+                <b class="offercity6">Egypt</b>
+             </a>
+         </div>
+         
+         <div>
+             <a href="about:blank">
+                <img alt="Paris" border="0" src="image/offer7.jpg" id="offer3"/>
+                <b class="offercity7">Paris</b>
+             </a>
+         </div>
+         <div>
+             <a href="about:blank" style="height: 10%;">
+                <img alt="Roma" border="0" src="image/offer8.jpg" id="offer4"/>
+                <b class="offercity8">Roma</b>
+             </a>
+         </div>
+         <div>
+             <a href="about:blank">
+                <img alt="GuangZhou" border="0" src="image/offer9.jpg" id="offer5"/>
+                <b class="offercity9">Guang Zhou</b>
+             </a>
+         </div>
+         <div>
+             <a href="about:blank" style="height: 10%;">
+                <img alt="Fuji" border="0" src="image/offer10.jpg" id="offer6"/>
+                <b class="offercity10">Fuji</b>
+             </a>
+         </div>
+     
+     </div>
+     
+     
+         <!--Footer part-->
+     <div class="footer">
+         <div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">Tablet Version</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">Mobile Version</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">Manage Your Bookings</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">CustomerService Help</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t">Become An Offilicate</p></a>
+             </div>
+             <div class="footer1">
+                 <a href="about:blank"><p class="footer1t"><b style="color: red;">Get</b>hotel.com for business</p></a>
+             </div>
+         </div>
+         <div class="footer2">
+            <div><a href="about:blank"><p>Countries</p></a></div>
+            <div><a href="about:blank"><p>Regions</p></a></div>
+            <div><a href="about:blank"><p>Cities</p></a></div>
+            <div><a href="about:blank"><p>Districts</p></a></div>
+            <div><a href="about:blank"><p>Airports</p></a></div>
+            <div><a href="about:blank"><p>Hotels</p></a></div>
+            <div><a href="about:blank"><p>Places of interest</p></a></div>
+         </div>
+         <div class="footer2">
+             <div><a href="about:blank"><p>Holiday rentals</p></a></div>
+             <div><a href="about:blank"><p>Apartments</p></a></div>
+             <div><a href="about:blank"><p>Resorts</p></a></div>
+             <div><a href="about:blank"><p>Villas</p></a></div>
+             <div><a href="about:blank"><p>Hostels</p></a></div>
+             <div><a href="about:blank"><p>B&amp;Bs</p></a></div>
+             <div><a href="about:blank"><p>Guest house</p></a></div>
+         </div>
+         <div class="footer2">
+             <div><a href="about:blank"><p>Unique place to stay</p></a></div>
+             <div><a href="about:blank"><p>All destination</p></a></div>
+             <div><a href="about:blank"><p>Reviews</p></a></div>
+             <div><a href="about:blank"><p>Unpacked: trael articles</p></a></div>
+         </div>
+        <div class="footer2">
+            <div><a href="about:blank"><p>Car hire</p></a></div>
+            <div><a href="about:blank"><p>Flight factor</p></a></div>
+            <div><a href="about:blank"><p>Restaurant Resevation</p></a></div>
+            <div><a href="about:blank"><p>GEThotel for Travel Agents</p></a></div>
+         </div>
+         <div class="footer2right">
+                <div><a href="about:blank"><p>About GEThotel.com</p></a></div>
+                <div><a href="about:blank"><p>Give website feedback</p></a></div>
+                <div><a href="about:blank"><p>Customer Service help</p></a></div>
+                <div><a href="about:blank"><p>Partner Help</p></a></div>
+                <div><a href="about:blank"><p>Careers</p></a></div>
+                <div><a href="about:blank"><p>Press centre</p></a></div>
+                <div><a href="about:blank"><p>Terms &amp; Conditions</p></a></div>
+                <div><a href="about:blank"><p>How we work</p></a></div>
+                <div><a href="about:blank"><p>Privacy &amp; Cookie Statement</p></a></div>
+                <div><a href="about:blank"><p>Cooporate contact</p></a></div>
+        </div>
+         <div class="company">
+     <p>Copyright &copy; 1949-2019 GETHotel.com&trade;. All right reserved</p>
+     </div> 
+     </div>
+    </body>

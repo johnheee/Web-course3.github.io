@@ -1,0 +1,180 @@
+      
+    /* IMPORT FONTS FOR SEARCH*/
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+    /* IMPORT CSS FOR SEARCH*/
+    @import url(css/bootstrap.min.css);
+    @import url(css/animate.css);
+    @import url(css/owl.carousel.css);
+    @import url(css/classy-nav.min.css);
+    @import url(css/magnific-popup.css);
+    @import url(css/font-awesome.min.css);
+    @import url(css/themify-icons.css);
+    @import url(css/nice-select.css);
+    @import url(css/jquery-ui.min.css);
+      
+  /* CSS FOR BODY */
+ 
+  /* CSS FOR HEADER */   
+  header {background:red;width: 100%;height: 5%;}
+  nav {height: -35px;margin: 0px auto;text-align: center;border-radius: 2px;}
+  ul {list-style: none;}
+  .main {display: flex;justify-content: center;}
+  .main > li {margin: 0 0%;}
+  .main > li a{border-left:1px solid rgba(23, 23, 50, 1);}
+  .bar {
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-family: monospace;
+  display: block;
+  padding: 10px 15px;
+  padding-right: 80px;
+  font-size: 16px;
+  transition: background-color 0.5s ease-in-out;
+  font-family: "Raleway", sans-serif;
+  }
+  .bar:hover {background-color: black;color: white;text-decoration: none;}
+  .logo{text-decoration : none;color: black;width: 10%;}
+  .logo:hover{text-decoration : none;color: black;}
+  .choosecountry {width: 10%;margin-top: -3%;margin-left: 55%;height: 3%;}
+      
+      
+  /* MAIN CSS FOR SEARCH */
+  .form-control {
+  background-color: transparent;
+  width: 100%;
+  height: 38px;
+  border-radius: 0;
+  font-size: 14px;
+  color: #000000;
+  margin-bottom: 30px;
+  font-weight: 500;
+  padding: 0 15px;
+  border: 1px solid #e1dddd; }
+  .form-control:hover, .form-control:focus {
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid #e1dddd; }
+
+.nice-select {
+  line-height: 34px; }
+  .nice-select .list {
+    left: 0 !important;
+    right: 0 !important;
+    border-radius: 0; }
+
+.south-search-area {
+  position: relative;
+  z-index: 1; }
+  .south-search-area .advanced-search-form {
+    background-color: rgba(255,255,255,0.8);
+    position: relative;
+    z-index: 1;
+    padding: 30px 50px;
+    border: 1px solid #e1dddd;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15); }
+    @media only screen and (max-width: 767px) {
+      .south-search-area .advanced-search-form {
+        padding: 30px 20px; } }
+    .south-search-area .advanced-search-form .search-title {
+      position: absolute;
+      width: 260px;
+      height: 45px;
+      background-color: red;
+      top: -46px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      padding: 0 40px;
+      text-align: center; }
+      @media only screen and (max-width: 767px) {
+        .south-search-area .advanced-search-form .search-title {
+          width: 210px;
+          padding: 0 15px; } }
+      .south-search-area .advanced-search-form .search-title p {
+        margin-bottom: 0;
+        color: #ffffff;
+        text-transform: uppercase;
+        line-height: 45px;
+        font-weight: 600; }
+    .south-search-area .advanced-search-form .slider-range {
+      flex: 0 0 50%;
+      min-width: 50%;
+      margin-bottom: 30px; }
+      @media only screen and (max-width: 767px) {
+        .south-search-area .advanced-search-form .slider-range {
+          margin-bottom: 50px; } }
+      .south-search-area .advanced-search-form .slider-range:first-child {
+        padding-right: 15px; }
+      .south-search-area .advanced-search-form .slider-range:last-child {
+        padding-left: 15px; }
+    .south-search-area .advanced-search-form .ui-widget.ui-widget-content {
+      border: none;
+      height: 4px; }
+    .south-search-area .advanced-search-form .ui-widget-content {
+      background: red; }
+    .south-search-area .advanced-search-form .ui-slider-horizontal {
+      height: 4px;
+      background: red; }
+    .south-search-area .advanced-search-form .ui-corner-all,
+    .south-search-area .advanced-search-form .ui-corner-bottom,
+    .south-search-area .advanced-search-form .ui-corner-right,
+    .south-search-area .advanced-search-form .ui-corner-br {
+      border-bottom-right-radius: 0; }
+    .south-search-area .advanced-search-form .ui-corner-all,
+    .south-search-area .advanced-search-form .ui-corner-bottom,
+    .south-search-area .advanced-search-form .ui-corner-left,
+    .south-search-area .advanced-search-form .ui-corner-bl {
+      border-bottom-left-radius: 0; }
+    .south-search-area .advanced-search-form .ui-corner-all,
+    .south-search-area .advanced-search-form .ui-corner-top,
+    .south-search-area .advanced-search-form .ui-corner-right,
+    .south-search-area .advanced-search-form .ui-corner-tr {
+      border-top-right-radius: 0; }
+    .south-search-area .advanced-search-form .ui-corner-all,
+    .south-search-area .advanced-search-form .ui-corner-top,
+    .south-search-area .advanced-search-form .ui-corner-left,
+    .south-search-area .advanced-search-form .ui-corner-tl {
+      border-top-left-radius: 0; }
+    .south-search-area .advanced-search-form .ui-state-default,
+    .south-search-area .advanced-search-form .ui-widget-content .ui-state-default,
+    .south-search-area .advanced-search-form .ui-widget-header .ui-state-default,
+    .south-search-area .advanced-search-form .ui-button,
+    .south-search-area .advanced-search-form html .ui-button.ui-state-disabled:hover,
+    .south-search-area .advanced-search-form html .ui-button.ui-state-disabled:active {
+      border: none;
+      background: red;
+      margin-top: -3px; }
+    .south-search-area .advanced-search-form .range {
+      font-size: 12px;
+      margin-top: 15px;
+      font-weight: 600; }
+      @media only screen and (max-width: 767px) {
+        .south-search-area .advanced-search-form .range {
+          font-size: 10px; } }
+    .south-search-area .advanced-search-form .more-filter a {
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #323232; }
+      .south-search-area .advanced-search-form .more-filter a:hover {
+        color: red; }
+    .south-search-area .advanced-search-form .search-form-second-steps {
+      display: none; }  
+
+
+      
+    /* CSS FOR POPULAR */
+      .popular {position: inherit; margin-top: 23%;text-align: center;background-color:white;}
+      .pheader{font-family:sans-serif;font-size: 50px;}
+      .dis1,.dis2,.dis3,.dis4{position: relative; width: 450px;height: 250px;margin: 4%;border-radius:10px;}
+      .dword1,.dword2{font-size: 20px;font-weight: 900;margin-top: -50px;}
+      
+      /* CSS FOR FOOTER */
+      .footer{background-color: rgb(211,211,211,0.6); width: 100%;float: inherit;}
+      .footer1{float: left;margin: 2.6%;}
+      .footer1t{color: black;}
+      .footer2{float: left;margin: 1.2%;border-right: solid 1px;padding-right: 5%;height: 400px;margin-left: 2%;}
+      .footer2right{float: left;margin: 1.2%;height: 400px;}
+      .company{margin: 3%;font-size: 13px}
+      
+      
